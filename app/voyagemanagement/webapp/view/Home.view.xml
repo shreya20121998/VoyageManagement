@@ -1,0 +1,62 @@
+
+<mvc:View xmlns:tnt="sap.tnt" xmlns:cards="sap.f.cards"
+xmlns:form="sap.ui.layout.form"
+controllerName="com.ingenx.nauti.voyagemanagement.controller.Home"
+xmlns:core="sap.ui.core" xmlns="sap.m"
+xmlns:mvc="sap.ui.core.mvc" displayBlock="true">
+
+    <Page id="page" class="page">
+
+        <headerContent>
+            <Bar id="_IDGenBar2">
+                <contentLeft>
+                    
+                    <core:Icon id="_IDGenIcon2"
+                        src="sap-icon://home"
+                        press="onPressHome"
+                    />
+                   
+                    <Text id="_IDGenText1"
+                        class="text1"
+                        text="Home"
+                    />
+                </contentLeft>
+                
+            </Bar>
+        </headerContent>
+
+
+        <GenericTile id="_IDGenGenericTile1" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
+         header="Nautical" subheader="Create Voyage" press=".onPress1" >
+            <TileContent id="_IDGenTileContent1">
+                <core:Icon class="icon" src="sap-icon://BusinessSuiteInAppSymbols/icon-vessel" />
+            </TileContent>
+        </GenericTile>
+    
+        <!-- <GenericTile id="_IDGenGenericTile2" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
+         header="Nautical" subheader="Live Bidding Controller" press=".onPress2">
+            <TileContent id="_IDGenTileContent2" >
+                <core:Icon class="icon" src="sap-icon://BusinessSuiteInAppSymbols/icon-change-analysis" />
+            </TileContent>
+        </GenericTile> -->
+
+        <GenericTile id="GenGenericTile23" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
+         header="Transaction" subheader="Dashboard" press=".onPress3">
+            <TileContent id="GenTileContent4">
+            <core:Icon class="icon" src="sap-icon://BusinessSuiteInAppSymbols/icon-vessel" />
+
+            </TileContent>
+        </GenericTile>
+
+        <!-- <GenericTile id="GenGenericTile12" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
+         header="Master" subheader="Dashboard" press=".onPress4">
+            <TileContent id="GenTileContent5">
+            <core:Icon class="icon" src="sap-icon://BusinessSuiteInAppSymbols/icon-vessel" />
+
+            </TileContent>
+        </GenericTile> -->
+ 
+
+    </Page>
+       
+</mvc:View>

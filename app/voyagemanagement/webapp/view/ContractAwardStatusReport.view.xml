@@ -1,0 +1,54 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:cards="sap.f.cards" xmlns:tnt="sap.tnt"
+ controllerName="com.ingenx.nauti.voyagemanagement.controller.ContractAwardStatusReport"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m" >
+     <Page >
+       <headerContent>
+            <Bar id="_IDGenBar2">
+                <contentLeft>
+                    <Button id="_IDGenIcon1"
+                        icon="sap-icon://nav-back"
+                        press="onBackPress"
+                    />
+                    <Button id="_IDGenIcon2"
+                        icon="sap-icon://home"
+                        press="onPressHome"
+                    />
+                   
+                    <Text id="_IDGenText1"
+                        class="text1"
+                        text="Contract Award Status Report"
+                    />
+                </contentLeft>
+                
+            </Bar>
+        </headerContent>
+        <Bar id="_IDGenBar1" class="_IDGenBar1">
+            <contentLeft>
+                <Button id="_IDGenButton1" text="Save as Variant" press="onSaveAs"></Button>
+                
+            </contentLeft>
+            <contentRight>
+                <Button id="_IDGenButton2" text="Exit" press="onExit"></Button>
+            </contentRight>
+        </Bar>
+        <Text id="EnterDetailsId" text="Enter Details" class="vgheading"></Text>
+        <VBox alignItems="Center">
+            <HBox id="_IDGenHBox2" >
+                <Label id="_IDLabel2" text="Chartering No: "></Label>
+                <Input id="searchField" showValueHelp="true"/>
+                <Label id="_IDGenLabel2" text="to:" class="sapUiSmallMarginBegin" ></Label>
+                <Input id="searchField2" />
+                <Button icon="sap-icon://rotate" type="Reject"></Button>
+            </HBox>
+        </VBox>
+ 
+        <footer>
+                <OverflowToolbar id="_IDGenOverflowToolbar1" design="Solid">
+                <ToolbarSpacer id="_IDGenToolbarSpacer1" />
+                <Button id="_IDGenButton11" text="Execute" type="Negative" icon="none"></Button>
+                </OverflowToolbar>
+            </footer>
+    </Page>
+</mvc:View>

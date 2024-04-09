@@ -1,0 +1,51 @@
+<mvc:View controllerName="com.ingenx.nauti.voyagemanagement.controller.CaptureVoyageDetails"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"  xmlns:tnt="sap.tnt">
+    
+   <Page class="page">
+       
+
+        <headerContent>
+            <Bar id="_IDGenBar2">
+                <contentLeft>
+                    <Button id="_IDGenIcon1"
+                        icon="sap-icon://nav-back"
+                        press="onBackPress"
+                    />
+                    <Button id="_IDGenIcon2"
+                        icon="sap-icon://home"
+                        press="onPressHome"
+                    />
+                   
+                    <Text id="_IDGenText1"
+                        class="text1"
+                        text="Capture Voyage Details"
+                    />
+                </contentLeft>
+                
+            </Bar>
+        </headerContent>
+
+        <VBox class="mastDash" >
+            <FlexBox   alignContent="SpaceAround">
+                <GenericTile id="GenGenericTile1" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
+                    header="Plan Info Details" press="onCaptureVoyagePlan" >
+                    <TileContent id="_IDGenTileContent1">
+                    <ImageContent id="_IDGenImageContent1" src="./images/voyage.png" ></ImageContent>
+                    </TileContent>
+                </GenericTile>
+                <GenericTile id="GenGenericTile2" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
+                    header="Actual Info Details"  press="onCaptureVoyageActual">
+                    <TileContent >
+                    <ImageContent src="./images/voyage.png"></ImageContent>
+                    </TileContent>
+                </GenericTile>
+            </FlexBox>
+        </VBox>
+  
+    
+   </Page>
+    
+</mvc:View>

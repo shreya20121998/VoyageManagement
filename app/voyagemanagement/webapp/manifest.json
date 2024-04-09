@@ -1,0 +1,414 @@
+{
+  "_version": "1.59.0",
+  "sap.app": {
+    "id": "com.ingenx.nauti.voyagemanagement",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.13.1",
+      "toolsId": "45a12ce2-a2d1-4ef7-baf2-1097853ea4c7"
+    },
+    "dataSources": {
+      "mainService": {
+        "uri": "/odata/v4/nautical/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "odataVersion": "4.0"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.122.1",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.f": {},
+        "sap.suite.ui.generic.template": {},
+        "sap.ui.comp": {},
+        "sap.ui.generic.app": {},
+        "sap.ui.table": {},
+        "sap.ushell": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "com.ingenx.nauti.voyagemanagement.i18n.i18n"
+        }
+      },
+      "": {
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {
+          "synchronizationMode": "None",
+          "operationMode": "Server",
+          "autoExpandSelect": true,
+          "earlyRequests": true
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "async": true,
+        "viewPath": "com.ingenx.nauti.voyagemanagement.view",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "clearControlAggregation": false
+      },
+      "routes": [
+        {
+          "name": "RouteHome",
+          "pattern": ":?query:",
+          "target": [
+            "TargetHome"
+          ]
+        },
+        {
+          "name": "RouteCreateVoyage",
+          "pattern": "createvoyage",
+          "target": [
+            "TargetCreateVoyage"
+          ]
+        },
+        {
+          "name": "RouteCreateVoyage",
+          "pattern": "CreateVoyage",
+          "target": [
+              "TargetCreateVoyage"
+          ]
+        },
+        {
+            "name": "RouteFreightSimulator",
+            "pattern": "FreightSimulator/{OriginData}/{destinationData}/{distanceData}/{cargo_sizedestination}/{cargo_sizeorigin}",
+            "target": [
+                "TargetFreightSimulator"
+            ]
+        },
+        {
+          "name": "RouteTransactionDashboard",
+          "pattern": "TransactionDashboard",
+          "target": [
+              "TargetTransactionDashboard"
+          ]
+        },
+
+        {
+          "name": "RouteCaptureVoyageDetails",
+          "pattern": "CaptureVoyageDetails",
+          "target": [
+              "TargetCaptureVoyageDetails"
+          ]
+        },
+        {
+          "name": "RouteCaptureVoyagePlan",
+          "pattern": "CaptureVoyagePlan",
+          "target": [
+              "TargetCaptureVoyagePlan"
+          ]
+        },
+        {
+          "name": "RouteCaptureVoyageActual",
+          "pattern": "CaptureVoyageActual",
+          "target": [
+              "TargetCaptureVoyageActual"
+          ]
+        },
+        {
+          "name": "RouteTrChangeVoyage",
+          "pattern": "changeVoyage",
+          "target": [
+              "TargetTrChangeVoyage"
+          ]
+        },
+        {
+          "name": "RouteDisplayVoyageDetails",
+          "pattern": "DisplayVoyageDetails",
+          "target": [
+              "TargetDisplayVoyageDetails"
+          ]
+        },
+        {
+          "name": "RouteMaintainEvents",
+          "pattern": "MaintainEvents",
+          "target": [
+              "TargetMaintainEvents"
+          ]
+        },
+        {
+          "name": "RouteVoyageApproval",
+          "pattern": "VoyageApproval",
+          "target": [
+              "TargetVoyageApproval"
+          ]
+        },
+        {
+          "name": "RouteCreateChartering",
+          "pattern": "CreateChartering",
+          "target": [
+              "TargetCreateChartering"
+          ]
+        },
+        {
+          "name": "RouteChangeChartering",
+          "pattern": "ChangeChartering",
+          "target": [
+              "TargetChangeChartering"
+          ]
+        },
+        {
+          "name": "RouteDisplayChartering",
+          "pattern": "DisplayChartering",
+          "target": [
+              "TargetDisplayChartering"
+          ]
+        },
+        {
+          "name": "RouteCharteringApproval",
+          "pattern": "CharteringApproval",
+          "target": [
+              "TargetCharteringApproval"
+          ]
+        },
+        {
+          "name": "RouteRequestForQuotation",
+          "pattern": "RequestForQuotation",
+          "target": [
+              "TargetRequestForQuotation"
+          ]
+        },
+        {
+          "name": "RouteCompareRequestForQuotation",
+          "pattern": "CompareRequestForQuotation",
+          "target": [
+              "TargetCompareRequestForQuotation"
+          ]
+        },
+        {
+          "name": "RouteInviteForLiveFrieghtNegotiation",
+          "pattern": "InviteForLiveFrieghtNegotiation",
+          "target": [
+              "TargetInviteForLiveFrieghtNegotiation"
+          ]
+        },
+        {
+          "name": "RouteCompareLiveFrieghtNegotiation",
+          "pattern": "CompareLiveFrieghtNegotiation",
+          "target": [
+              "TargetCompareLiveFrieghtNegotiation"
+          ]
+        },
+        {
+          "name": "RouteContractAwardStatusReport",
+          "pattern": "ContractAwardStatusReport",
+          "target": [
+              "TargetContractAwardStatusReport"
+          ]
+        },
+        {
+          "name": "RouteBiddingHistoryReport",
+          "pattern": "BiddingHistoryReport",
+          "target": [
+              "TargetBiddingHistoryReport"
+          ]
+        }
+      ],
+      "targets": {
+        "TargetHome": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "Home",
+          "viewName": "Home"
+        },
+        "TargetCreateVoyage": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "CreateVoyage",
+          "viewName": "CreateVoyage"
+        },
+        "TargetFreightSimulator": {
+            "viewType": "XML",
+            "transition": "slide",
+            "clearControlAggregation": false,
+            "viewId": "FreightSimulator",
+            "viewName": "FreightSimulator"
+        },
+        "TargetTransactionDashboard": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "TransactionDashboard",
+          "viewName": "TransactionDashboard"
+        },
+        "TargetCaptureVoyageDetails": {
+            "viewType": "XML",
+            "transition": "slide",
+            "clearControlAggregation": false,
+            "viewId": "CaptureVoyageDetails",
+            "viewName": "CaptureVoyageDetails"
+        },
+        "TargetCaptureVoyagePlan": {
+            "viewType": "XML",
+            "transition": "slide",
+            "clearControlAggregation": false,
+            "viewId": "CaptureVoyagePlan",
+            "viewName": "CaptureVoyagePlan"
+        },
+        "TargetCaptureVoyageActual": {
+            "viewType": "XML",
+            "transition": "slide",
+            "clearControlAggregation": false,
+            "viewId": "CaptureVoyageActual",
+            "viewName": "CaptureVoyageActual"
+        },
+        "TargetTrChangeVoyage": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "TrChangeVoyage",
+          "viewName": "TrChangeVoyage"
+        },
+        "TargetDisplayVoyageDetails": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "DisplayVoyageDetails",
+          "viewName": "DisplayVoyageDetails"
+        },
+        "TargetMaintainEvents": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "MaintainEvents",
+          "viewName": "MaintainEvents"
+        },
+        "TargetVoyageApproval": {
+            "viewType": "XML",
+            "transition": "slide",
+            "clearControlAggregation": false,
+            "viewId": "VoyageApproval",
+            "viewName": "VoyageApproval"
+        },
+        "TargetCreateChartering": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "CreateChartering",
+          "viewName": "CreateChartering"
+        },
+        "TargetChangeChartering": {
+            "viewType": "XML",
+            "transition": "slide",
+            "clearControlAggregation": false,
+            "viewId": "ChangeChartering",
+            "viewName": "ChangeChartering"
+        },
+        "TargetDisplayChartering": {
+            "viewType": "XML",
+            "transition": "slide",
+            "clearControlAggregation": false,
+            "viewId": "DisplayChartering",
+            "viewName": "DisplayChartering"
+        },
+        "TargetCharteringApproval": {
+            "viewType": "XML",
+            "transition": "slide",
+            "clearControlAggregation": false,
+            "viewId": "CharteringApproval",
+            "viewName": "CharteringApproval"
+        },
+        "TargetRequestForQuotation": {
+            "viewType": "XML",
+            "transition": "slide",
+            "clearControlAggregation": false,
+            "viewId": "RequestForQuotation",
+            "viewName": "RequestForQuotation"
+        },
+        "TargetCompareRequestForQuotation": {
+            "viewType": "XML",
+            "transition": "slide",
+            "clearControlAggregation": false,
+            "viewId": "CompareRequestForQuotation",
+            "viewName": "CompareRequestForQuotation"
+        },
+        "TargetInviteForLiveFrieghtNegotiation": {
+            "viewType": "XML",
+            "transition": "slide",
+            "clearControlAggregation": false,
+            "viewId": "InviteForLiveFrieghtNegotiation",
+            "viewName": "InviteForLiveFrieghtNegotiation"
+        },
+        "TargetCompareLiveFrieghtNegotiation": {
+            "viewType": "XML",
+            "transition": "slide",
+            "clearControlAggregation": false,
+            "viewId": "CompareLiveFrieghtNegotiation",
+            "viewName": "CompareLiveFrieghtNegotiation"
+        },
+        "TargetContractAwardStatusReport": {
+            "viewType": "XML",
+            "transition": "slide",
+            "clearControlAggregation": false,
+            "viewId": "ContractAwardStatusReport",
+            "viewName": "ContractAwardStatusReport"
+        },
+        "TargetBiddingHistoryReport": {
+            "viewType": "XML",
+            "transition": "slide",
+            "clearControlAggregation": false,
+            "viewId": "BiddingHistoryReport",
+            "viewName": "BiddingHistoryReport"
+        }
+
+      }
+    },
+    "rootView": {
+      "viewName": "com.ingenx.nauti.voyagemanagement.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "App"
+    }
+  }
+}

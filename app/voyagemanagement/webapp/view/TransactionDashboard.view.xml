@@ -1,0 +1,174 @@
+<mvc:View controllerName="com.ingenx.nauti.voyagemanagement.controller.TransactionDashboard"
+xmlns:html="http://www.w3.org/1999/xhtml"
+xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns:core="sap.ui.core"
+xmlns="sap.m" xmlns:tnt="sap.tnt" >
+    
+    <Page id="_IDGenPage1">
+
+        <headerContent>
+            <Bar id="_IDGenBar2">
+                <contentLeft>
+                    <Button id="_IDGenIcon1"
+                        icon="sap-icon://nav-back"
+                        press="onBackPress"
+                    />
+                    <Button id="_IDGenIcon2"
+                        icon="sap-icon://home"
+                        press="onPressHome"
+                    />
+                   
+                    <Text id="_IDGenText1"
+                        class="text1"
+                        text="Transaction Dashboard"
+                    />
+                </contentLeft>
+                
+            </Bar>
+        </headerContent>
+
+        <IconTabHeader id="iconTabHeaderId" mode="Inline" class="transactiontoolHeader2" >
+            <items>
+                <IconTabFilter id="voyageId" key="voyage" text="Voyage" />
+                <IconTabFilter id="freightsimulatorId" key="freightsimulator" text="Freight Simulator" />
+                <IconTabFilter id="charteringId" key="chartering" text="Chartering"/>
+                <IconTabFilter id="quotationId" key="quotation" text="Quotation"/>
+                <IconTabFilter id="negotiationId" key="negotiation" text="Negotiation"/>
+                <IconTabFilter id="reportsId" key="reports" text="Reports"/>
+            </items>
+	    </IconTabHeader>
+
+        
+ 
+        <VBox   class="transactionDashboard" >
+            
+            <Title id="voyageTileId" text="Voyage" titleStyle="H4" />
+            <FlexBox  class="transactionFlexBox">
+                <GenericTile id="GenGenericTile1" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
+                    header="Capture Voyage Details" press="onCaptureVoyage" >
+                    <TileContent id="_IDGenTileContent1">
+                    <ImageContent id="_IDGenImageContent1" src="./images/voyage.png" ></ImageContent>
+                    </TileContent>
+                </GenericTile>
+                <GenericTile id="GenGenericTile2" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
+                    header="Change Voyage Details" press="onChangeVoyage">
+                    <TileContent >
+                    <ImageContent src="./images/vessel.png"></ImageContent>
+                    </TileContent>
+                </GenericTile>
+                <GenericTile id="GenGenericTile3" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
+                    header="Display Voyage Details" press="onDisplayVoyage">
+                    <TileContent >
+                    <ImageContent src="./images/voyage.png"></ImageContent>
+                    </TileContent>
+                </GenericTile>
+                <GenericTile id="GenGenericTile4" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
+                    header="Maintain Events" press="onMaintainEvents">
+                    <TileContent >
+                    <ImageContent src="./images/maintainEvent.png"></ImageContent>
+                    </TileContent>
+                </GenericTile>
+                <GenericTile id="GenGenericTile5" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
+                    header="Voyage Approval" press="onVoyageApproval">
+                    <TileContent >
+                    <ImageContent src="./images/voyageApproval.png"></ImageContent>
+                    </TileContent>
+                </GenericTile>
+            </FlexBox>
+            <Title id="freightSimulatorTileId" text="Freight Simulator" titleStyle="H4" />
+            <FlexBox  class="transactionFlexBox">
+                <GenericTile id="GenGenericTile6" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
+                    header="Freight Simulator" press="onFrieghtPress" >
+                    <TileContent >
+                    <ImageContent src="./images/voyage.png" ></ImageContent>
+                    </TileContent>
+                </GenericTile>
+            </FlexBox>
+
+            <Title id="charteringTileId" text="Chartering" titleStyle="H4" />
+            <FlexBox  class="transactionFlexBox">
+                <GenericTile id="GenGenericTile7" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
+                    header="Create Chartering" press="onCreateChartering" >
+                    <TileContent >
+                    <ImageContent src="./images/createChartering.png" ></ImageContent>
+                    </TileContent>
+                </GenericTile>
+                <GenericTile id="GenGenericTile8" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
+                    header="Change Chartering" press="onChangeChartering">
+                    <TileContent >
+                    <ImageContent src="./images/changeChartering.png"></ImageContent>
+                    </TileContent>
+                </GenericTile>
+                <GenericTile id="GenGenericTile9" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
+                    header="Display Chartering" press="onDisplayChartering">
+                    <TileContent >
+                    <ImageContent src="./images/displayChartering.png"></ImageContent>
+                    </TileContent>
+                </GenericTile>
+                <GenericTile id="GenGenericTile10" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
+                    header="Chartering Approval" press="onCharteringApproval">
+                    <TileContent >
+                    <ImageContent src="./images/voyageApproval.png"></ImageContent>
+                    </TileContent>
+                </GenericTile>
+                </FlexBox>
+
+            <Title id="quotationTileId" text="Quotation" titleStyle="H4" />
+            <FlexBox  class="transactionFlexBox">
+                <GenericTile id="GenGenericTile11" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
+                    header="Request For Quotation" press="onRequestForQuotation" >
+                    <TileContent >
+                    <ImageContent src="./images/reqForQuotation.png" ></ImageContent>
+                    </TileContent>
+                </GenericTile>
+           
+                <GenericTile id="GenGenericTile12" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
+                    header="Compare Request For Quotation" press="onCompareRequestForQuotation" >
+                    <TileContent >
+                    <ImageContent src="./images/compareReqForQuotation.png" ></ImageContent>
+                    </TileContent>
+                </GenericTile>
+            </FlexBox>
+
+            <Title text="Negotiation" titleStyle="H4" />
+            <FlexBox id="negotiationTileId" class="transactionFlexBox">
+                <GenericTile id="GenGenericTile13" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
+                    header="Invite For Live Freight Negotiation" press="onInviteForLiveFrieghtNegotiation" >
+                    <TileContent >
+                    <ImageContent src="./images/reqForQuotation.png" ></ImageContent>
+                    </TileContent>
+                </GenericTile>
+            
+                <GenericTile id="GenGenericTile14" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
+                    header="Compare Live Freight Negotitation" press="onCompareLiveFrieghtNegotiation" >
+                    <TileContent >
+                    <ImageContent src="./images/compareLiveFrieghtNegotiation.png" ></ImageContent>
+                    </TileContent>
+                </GenericTile>
+            </FlexBox>
+
+            <Title text="Reports" titleStyle="H4" />
+            <FlexBox id="reportTileId" class="transactionFlexBox">
+                <GenericTile id="GenGenericTile15" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
+                    header="Contract Award Status Report" press="onContractAwardStatusReport" >
+                    <TileContent >
+                    <ImageContent src="./images/contractAwardStatusReport.png" ></ImageContent>
+                    </TileContent>
+                </GenericTile>
+                <GenericTile id="GenGenericTile16" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
+                    header="Bidding History Report" press="onBiddingHistoryReport" >
+                    <TileContent >
+                    <ImageContent src="./images/biddingHistoryReport.png" ></ImageContent>
+                    </TileContent>
+                </GenericTile>
+            </FlexBox>
+
+        </VBox>
+
+          
+      
+	</Page>
+
+   
+    
+    
+</mvc:View>
