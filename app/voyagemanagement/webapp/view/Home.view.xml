@@ -5,16 +5,16 @@ controllerName="com.ingenx.nauti.voyagemanagement.controller.Home"
 xmlns:core="sap.ui.core" xmlns="sap.m"
 xmlns:mvc="sap.ui.core.mvc" displayBlock="true">
 
-    <Page id="page" class="page">
+    <Page id="page" class="page" showHeader="false">
 
-        <headerContent>
+        <!-- <headerContent>
             <Bar id="_IDGenBar2">
                 <contentLeft>
                     
-                    <!-- <core:Icon id="_IDGenIcon2"
+                    <core:Icon id="_IDGenIcon2"
                         src="sap-icon://home"
                         press="onPressHome"
-                    /> -->
+                    />
                    
                     <Text id="_IDGenText1"
                         class="text1"
@@ -24,7 +24,7 @@ xmlns:mvc="sap.ui.core.mvc" displayBlock="true">
                 </contentLeft>
                 
             </Bar>
-        </headerContent>
+        </headerContent> -->
 
 
         <GenericTile id="_IDGenGenericTile1" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"

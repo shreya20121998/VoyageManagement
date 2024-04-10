@@ -4,20 +4,20 @@
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m"  xmlns:tnt="sap.tnt">
     
-   <Page class="page">
+   <Page class="page" showHeader="false">
        
-
+<!-- 
         <headerContent>
             <Bar id="_IDGenBar2">
                 <contentLeft>
-                    <!-- <Button id="_IDGenIcon1"
+                    <Button id="_IDGenIcon1"
                         icon="sap-icon://nav-back"
                         press="onBackPress"
                     />
                     <Button id="_IDGenIcon2"
                         icon="sap-icon://home"
                         press="onPressHome"
-                    /> -->
+                    />
                    
                     <Text id="_IDGenText1"
                         class="text1"
@@ -26,7 +26,7 @@
                 </contentLeft>
                 
             </Bar>
-        </headerContent>
+        </headerContent> -->
 
         <VBox class="mastDash" >
             <FlexBox   alignContent="SpaceAround">

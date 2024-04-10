@@ -3,18 +3,18 @@
     xmlns:html="http://www.w3.org/1999/xhtml"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m" >
-     <Page >
-        <headerContent>
+     <Page showHeader="false">
+        <!-- <headerContent>
             <Bar id="_IDGenBar2">
                 <contentLeft>
-                    <!-- <Button id="_IDGenIcon1"
+                    <Button id="_IDGenIcon1"
                         icon="sap-icon://nav-back"
                         press="onBackPress"
                     />
                     <Button id="_IDGenIcon2"
                         icon="sap-icon://home"
                         press="onPressHome"
-                    /> -->
+                    />
                    
                     <Text id="_IDGenText1"
                         class="text1"
@@ -23,7 +23,7 @@
                 </contentLeft>
                 
             </Bar>
-        </headerContent>
+        </headerContent> -->
         <Bar id="_IDGenBar1" class="_IDGenBar1">
             <contentLeft>
                 <Button id="_IDGenButton1" text="Save as Variant" press="onSaveAs"></Button>

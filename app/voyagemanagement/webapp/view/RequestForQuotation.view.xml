@@ -3,19 +3,19 @@ xmlns:form="sap.ui.layout.form" xmlns:l="sap.ui.layout"
  controllerName="com.ingenx.nauti.voyagemanagement.controller.RequestForQuotation"
 xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" displayBlock="true">
 
-    <Page >
+    <Page showHeader="false">
         
-        <headerContent>
+        <!-- <headerContent>
             <Bar id="_IDGenBar2">
                 <contentLeft>
-                    <!-- <Button id="_IDGenIcon1"
+                    <Button id="_IDGenIcon1"
                         icon="sap-icon://nav-back"
                         press="onBackPress"
                     />
                     <Button id="_IDGenIcon2"
                         icon="sap-icon://home"
                         press="onPressHome"
-                    /> -->
+                    />
                    
                     <Text id="_IDGenText71"
                         class="text1"
@@ -24,7 +24,7 @@ xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" displayBlock="true">
                 </contentLeft>
                 
             </Bar>
-        </headerContent>
+        </headerContent> -->
         <Bar id="navbar">
             <contentLeft>
             <Button id="Button2" text="Sumbit Quotation" press="onSubmitQuotation" />

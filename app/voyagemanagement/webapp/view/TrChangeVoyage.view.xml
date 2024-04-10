@@ -5,18 +5,18 @@
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form"
       
     xmlns="sap.m">
-    <Page id="page">
-       <headerContent>
+    <Page id="page" showHeader="false">
+       <!-- <headerContent>
             <Bar id="_IDGenBar2">
                 <contentLeft>
-                    <!-- <Button id="_IDGenIcon1"
+                    <Button id="_IDGenIcon1"
                         icon="sap-icon://nav-back"
                         press="onBackPress"
                     />
                     <Button id="_IDGenIcon2"
                         icon="sap-icon://home"
                         press="onPressHome"
-                    /> -->
+                    />
                    
                     <Text id="_IDGenText91"
                         class="text1"
@@ -25,7 +25,7 @@
                 </contentLeft>
                 
             </Bar>
-        </headerContent>
+        </headerContent> -->
     
         
         <Bar id="navbar">
