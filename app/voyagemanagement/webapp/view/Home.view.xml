@@ -11,15 +11,16 @@ xmlns:mvc="sap.ui.core.mvc" displayBlock="true">
             <Bar id="_IDGenBar2">
                 <contentLeft>
                     
-                    <core:Icon id="_IDGenIcon2"
+                    <!-- <core:Icon id="_IDGenIcon2"
                         src="sap-icon://home"
                         press="onPressHome"
-                    />
+                    /> -->
                    
                     <Text id="_IDGenText1"
                         class="text1"
                         text="Home"
                     />
+
                 </contentLeft>
                 
             </Bar>

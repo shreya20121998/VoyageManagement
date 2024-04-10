@@ -7,14 +7,14 @@
        <headerContent>
             <Bar id="_IDGenBar2">
                 <contentLeft>
-                    <Button id="_IDGenIcon1"
+                    <!-- <Button id="_IDGenIcon1"
                         icon="sap-icon://nav-back"
                         press="onBackPress"
                     />
                     <Button id="_IDGenIcon2"
                         icon="sap-icon://home"
                         press="onPressHome"
-                    />
+                    /> -->
                    
                     <Text id="_IDGenText1"
                         class="text1"
